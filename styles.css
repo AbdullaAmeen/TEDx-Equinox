@@ -178,7 +178,7 @@ landing page
 .spkrsAbout-l {
   display: flex;
   /*width: 595px;*/
-  /* height: 230px; */
+
   padding: 1vw 1.5vw;
   /* margin-top: 2vh; */
   justify-content: center;
@@ -189,7 +189,7 @@ landing page
 
 .spkrsAboutText-l {
   /* width: 520px; */
-
+  min-height: 375px;
   font-family: "Arial, Helvetica, sans-serif";
   font-style: normal;
   font-weight: 400;
@@ -205,6 +205,7 @@ landing page
   height: 230px;
   padding: 42px 30px;
   margin-top: 2vh; */
+  align-content: center;
   justify-content: center;
   align-items: center;
   border-radius: 40px;
@@ -213,7 +214,7 @@ landing page
 
 .spkrsAboutText-r {
   /* width: 520px; */
-
+  min-height: 375px;
   color: var(--white, #faf9f6);
 
   font-family: "Arial, Helvetica, sans-serif";
@@ -232,26 +233,26 @@ landing page
 .spkrsPhoto-l {
   border-radius: 40px;
   background: var(--light-black, #232323);
-  width: 199px;
+  width: 158px;
   height: 158px;
 }
 .spkrsPhoto-r {
   border-radius: 40px;
   background: var(--red, #ff2b06);
-  width: 199px;
+  width: 158px;
   height: 158px;
 }
 .spkrsTitleBlock-l {
-  /* width: 381px; */
-
+  display: flex;
+  flex: 1;
   padding: 10px 10px 10px 10px;
   margin-left: 2vh;
   background: var(--light-black, #232323);
   border-radius: 40px;
 }
 .spkrsTitleBlock-r {
-  /* width: 381px; */
-
+  display: flex;
+  flex: 1;
   padding: 10px 10px 10px 10px;
   margin-left: 2vh;
   background: var(--red, #ff2b06);
@@ -400,6 +401,20 @@ landing page
     font-size: 2.5rem;
     line-height: normal;
   }
+  .arrowL {
+    width: 45%;
+  }
+  .arrowR {
+    width: 45%;
+  }
+
+  /*Contact*/
+  .contactpage {
+    flex-direction: column;
+  }
+  .leftcontactcontainer {
+    width: 90vw !important;
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -421,13 +436,14 @@ landing page
   width: auto;
 }
 .heading-section-text {
-  color: var(--light-black, #232323);
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 3.125rem;
+  font-family: "Arial, Helvetica, sans-serif";
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  font-size: 50px;
+  line-height: 68px;
+  text-align: center;
+  margin-left: 36px;
+  color: #232323;
 }
 
 .twoBlocks {
@@ -672,6 +688,7 @@ landing page
 }
 .leftcontactcontainer {
   display: flex;
+  width: 34vw;
   flex-direction: column;
   /* justify-content: center; */
   justify-content: center;
@@ -680,46 +697,51 @@ landing page
 }
 .rightcontactcontainer {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 20px;
 }
 .contacticonscontainer {
   display: flex;
+  flex: 1;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
 }
 .contact {
   display: flex;
+  flex: 1;
   align-items: center;
-  width: 595px;
-  height: 140px;
+  /* width: 595px;
+  height: 140px; */
   left: 30px;
   top: 30px;
-
+  width: inherit;
   background: #faf9f6;
   border-radius: 40px;
 }
 .contactcontent {
   margin-left: 36px;
-  width: 322px;
-  height: 68px;
-  left: 50px;
-  top: 36px;
+  display: flex;
+  flex: 1;
   font-family: "Arial, Helvetica, sans-serif";
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
   line-height: 68px;
   text-align: center;
+  margin-left: 36px;
   color: #232323;
+  /* width: 322px;
+  height: 68px; */
 }
 
 .contactpage .imagesection {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 595px;
-  height: 550px;
+  /* width: 595px;
+  height: 550px; */
   left: 655px;
   top: 30px;
   background: #232323;
@@ -727,8 +749,11 @@ landing page
 }
 
 .contactpage .imagesection .image {
-  width: 508.81px;
-  height: 490px;
+  width: 35vw;
+  max-width: 420px;
+  max-height: 100%;
+  min-width: 300px;
+  min-height: 155px;
   left: calc(50% - 508.81px / 2 - 0.1px);
   top: calc(50% - 490px / 2);
 }
@@ -736,20 +761,23 @@ landing page
 .contactpage .leftcontactcontainer .mail,
 .phone,
 .address {
+  flex: 1;
   display: flex;
-
+  width: 100%;
   justify-content: center;
   align-items: center;
-  width: 595px;
-  height: 100px;
+  /* width: 595px;
+  height: 100px; */
   left: 30px;
   top: 200px;
   background: #ff2b06;
   border-radius: 70px;
 }
 .contactpage .leftcontactcontainer .mail .content {
-  width: 363px;
-  height: 43px;
+  flex: 1;
+  /* width: 363px;
+  height: 43px; */
+  width: 100%;
   left: calc(50% - 363px / 2);
   top: calc(50% - 43px / 2 + 0.5px);
   font-family: "Arial, Helvetica, sans-serif";
@@ -762,8 +790,11 @@ landing page
 }
 .contactpage .phone .content {
   /* position: absolute; */
-  width: 266px;
-  height: 43px;
+  /* width: 266px;
+  
+  height: 43px; */
+  width: 100%;
+  flex: 1;
   left: calc(50% - 266px / 2 + 0.5px);
   top: calc(50% - 43px / 2 + 0.5px);
   font-family: "Arial, Helvetica, sans-serif";
@@ -776,8 +807,8 @@ landing page
 }
 .contactpage .address .content {
   /* position: absolute; */
-  width: 489px;
-  height: 64px;
+  /* width: 489px;
+  height: 64px; */
   left: calc(50% - 489px / 2);
   top: calc(50% - 64px / 2);
   font-family: "Arial, Helvetica, sans-serif";
@@ -792,19 +823,20 @@ landing page
 .instagram,
 .linkedin {
   display: flex;
-  width: 178px;
-  height: 80px;
+  /* width: 178px;
+  height: 80px; */
   background: #ff2b06;
   border-radius: 80px;
   text-align: center;
   align-items: center;
   justify-content: center;
+  width: 33%;
 }
 .contactpage .facebook .icon {
   display: flex;
   /* position: absolute; */
-  width: 40px;
-  height: 39.9px;
+  /* width: 40px;
+  height: 39.9px; */
   font-size: 52px;
   justify-content: center;
   align-items: center;
@@ -822,8 +854,8 @@ landing page
   /* position: absolute; */
   display: flex;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  /* width: 40px;
+  height: 40px; */
   left: calc(50% - 40px / 2);
   top: calc(50% - 40px / 2);
   font-size: 52px;
@@ -836,8 +868,8 @@ landing page
   /* position: absolute; */
   display: flex;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  /* width: 40px;
+  height: 40px; */
   left: calc(50% - 40px / 2);
   top: calc(50% - 40px / 2);
 
@@ -852,16 +884,16 @@ landing page
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 595px;
-  height: 80px;
+  /* width: 595px;
+  height: 80px; */
   left: 655px;
   top: 610px;
   background: #faf9f6;
   border-radius: 60px;
 }
 .contactpage .copyright .content {
-  width: 382px;
-  height: 41px;
+  /* width: 382px;
+  height: 41px; */
   left: calc(50% - 382px / 2 + 0.5px);
   top: calc(50% - 41px / 2 + 0.5px);
 
