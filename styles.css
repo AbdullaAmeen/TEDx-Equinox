@@ -104,9 +104,10 @@ body {
   border-radius: 30px;
   font-size: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin: 0 10px 0 0px;
-  padding: 2rem 0.01em;
+  text-decoration: none;
+  /* padding: 2rem 0.01em; */
 }
 #logocount {
   list-style: none;
@@ -133,7 +134,6 @@ landing page
 
 /*Speakers */
 .speakers {
-  height: 100vh;
   background: var(--black, #000);
   display: flex;
   justify-content: center;
@@ -318,22 +318,29 @@ landing page
   flex-shrink: 0;
   border-radius: 70px;
   background: var(--white, #faf9f6);
-  width: 50%;
+  width: 48%;
 }
 
 .arrowR {
   display: flex;
-  width: 50%;
+  width: 48%;
   /* height: 140px; */
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  margin-left: 4vh;
+  margin-left: 2%;
   border-radius: 70px;
   background: var(--white, #faf9f6);
 }
-
-@media screen and (max-width: 825px) {
+#sponsors {
+  height: 100vh;
+  display: flex;
+}
+#speakers {
+  height: 100vh;
+  display: flex;
+}
+@media screen and (max-width: 820px) {
   /* count logo */
   .pageBody {
     margin: 0 5% 0 5%;
@@ -343,6 +350,7 @@ landing page
   #logocount {
     flex-direction: column;
     width: fit-content;
+    margin-bottom: 10vh;
   }
   #equinoxlogo {
     margin: 0;
@@ -415,13 +423,34 @@ landing page
   .leftcontactcontainer {
     width: 90vw !important;
   }
-}
+  .rightcontactcontainer {
+    width: 90vw !important;
+  }
 
-@media screen and (max-width: 420px) {
-  .speakers {
-    display: flex;
+  /*Sponsor*/
+  .heading-section {
+    width: 85vw !important;
+  }
+  .twoBlocks {
     flex-direction: column;
-    width: fit-content;
+  }
+  .left-sponsors-section {
+    width: 85vw !important;
+  }
+  .right-sponsors-section {
+    width: 85vw !important;
+  }
+
+  .sponsor_img {
+    width: 84vw !important;
+    height: 28vw !important;
+  }
+  .sun_img {
+    width: 84vw !important;
+    height: 28vw !important;
+  }
+  #speakers {
+    height: calc(220vh - 15vw);
   }
 }
 
@@ -433,7 +462,9 @@ landing page
   background: var(--white, #faf9f6);
   /*padding: 36px 333px 36px 50px;*/
   align-items: center;
-  width: auto;
+  width: 33vw;
+
+  padding-left: 36px;
 }
 .heading-section-text {
   font-family: "Arial, Helvetica, sans-serif";
@@ -442,14 +473,14 @@ landing page
   font-size: 50px;
   line-height: 68px;
   text-align: center;
-  margin-left: 36px;
+
   color: #232323;
 }
 
 .twoBlocks {
   margin-top: 7em;
   display: flex;
-  /* gap: 3em; */
+  gap: 10px;
   margin-bottom: 7em;
   justify-content: center;
   height: 80vh;
@@ -459,8 +490,9 @@ landing page
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 35vw;
-  min-width: 35vw;
+  align-items: center;
+  width: 33vw;
+
   /* gap: 2em; */
 }
 
@@ -474,8 +506,8 @@ landing page
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-width: 35vw;
-  max-width: 35vw;
+  align-items: center;
+  width: 33vw;
   /* gap: 2em; */
 }
 
@@ -574,14 +606,34 @@ landing page
 }
 
 .sun_img {
+  /* width: 442.87px;
+  height: 110px; */
+
+  border-radius: 40px;
+  width: 30vw;
+  height: 5vw;
+
+  /*padding: 0 18px;*/
+}
+.sun-img-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  padding: 0 18px;
+  min-width: 33vw;
+  border-radius: 40px;
+  background-color: #faf9f6;
+}
+.sponsor_img {
   margin-top: 1em;
   /* width: 442.87px;
   height: 110px; */
   flex-shrink: 0;
   border-radius: 40px;
-  max-width: 35vw;
+  width: 30vw;
+  height: 10vw;
 }
-
 .bottombox {
   height: 9em;
   background: #faf9f6;
@@ -684,9 +736,10 @@ landing page
   display: flex;
   gap: 20px;
   justify-content: center;
-  background-color: black;
+  height: 120vh;
 }
 .leftcontactcontainer {
+  margin-top: 80px;
   display: flex;
   width: 34vw;
   flex-direction: column;
@@ -696,24 +749,28 @@ landing page
   gap: 20px;
 }
 .rightcontactcontainer {
+  margin-top: 50px;
   display: flex;
-  flex: 1;
+  width: 34vw;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 .contacticonscontainer {
   display: flex;
-  flex: 1;
+  /* flex: 1; */
   flex-direction: row;
   justify-content: center;
   width: 100%;
 }
 .contact {
   display: flex;
-  flex: 1;
+  /* flex: 1; */
   align-items: center;
   /* width: 595px;
   height: 140px; */
+  padding: 10px;
   left: 30px;
   top: 30px;
   width: inherit;
@@ -721,16 +778,16 @@ landing page
   border-radius: 40px;
 }
 .contactcontent {
-  margin-left: 36px;
+  padding-left: 36px;
   display: flex;
-  flex: 1;
+  /* flex: 1; */
   font-family: "Arial, Helvetica, sans-serif";
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
   line-height: 68px;
   text-align: center;
-  margin-left: 36px;
+
   color: #232323;
   /* width: 322px;
   height: 68px; */
@@ -746,22 +803,23 @@ landing page
   top: 30px;
   background: #232323;
   border-radius: 40px;
+  width: inherit;
 }
 
 .contactpage .imagesection .image {
-  width: 35vw;
+  width: inherit;
   max-width: 420px;
   max-height: 100%;
   min-width: 300px;
   min-height: 155px;
-  left: calc(50% - 508.81px / 2 - 0.1px);
-  top: calc(50% - 490px / 2);
+  border-radius: 40px;
 }
 
 .contactpage .leftcontactcontainer .mail,
 .phone,
 .address {
-  flex: 1;
+  /* flex: 1; */
+  padding: 10px;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -831,6 +889,7 @@ landing page
   align-items: center;
   justify-content: center;
   width: 33%;
+  flex: 1;
 }
 .contactpage .facebook .icon {
   display: flex;
@@ -853,6 +912,7 @@ landing page
 .contactpage .instagram .icon {
   /* position: absolute; */
   display: flex;
+
   align-items: center;
   /* width: 40px;
   height: 40px; */
@@ -890,6 +950,9 @@ landing page
   top: 610px;
   background: #faf9f6;
   border-radius: 60px;
+  padding: 10px;
+  width: inherit;
+  padding: 10px;
 }
 .contactpage .copyright .content {
   /* width: 382px;

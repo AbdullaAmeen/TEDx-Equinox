@@ -1,10 +1,19 @@
 const main = () => {
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    console.log("YES");
+    const el = document.getElementById("speakers");
+    el.style.height = "100vh";
+  }
   const second = 1000;
   const minute = second * 60;
   const hour = minute * 60;
   const day = hour * 24;
 
-  const EVENTDATE = new Date("July 30, 2023, 17:00:00");
+  const EVENTDATE = new Date("August 27, 2023, 13:30:00");
 
   const countDown = new Date(EVENTDATE).getTime();
   const x = setInterval(() => {
@@ -23,6 +32,7 @@ const main = () => {
     );
   }, 0);
 };
+
 main();
 
 const first = {
