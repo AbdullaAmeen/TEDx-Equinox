@@ -340,7 +340,7 @@ landing page
   height: 100vh;
   display: flex;
 }
-@media screen and (max-width: 820px) {
+@media screen and ((max-width: 820px) or (orientation: portrait)) {
   /* count logo */
   .pageBody {
     margin: 0 5% 0 5%;
